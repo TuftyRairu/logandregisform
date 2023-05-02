@@ -1,0 +1,147 @@
+.body_account_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 75vh;
+  width: 70vw;
+  margin: 11.5vh 0;
+  border: solid 3px black;
+}
+.body_account_content h1 {
+  text-align: center;
+  text-decoration: underline;
+  color: white;
+  margin: 8vh 0 4vh 0;
+}
+.body_account_content .left_head {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.body_account_content .left_head .left_account_body {
+  display: flex;
+  justify-content: center;
+  background-color: olivedrab;
+  position: absolute;
+  z-index: 2;
+  transition: z-index 0.7s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+.body_account_content .left_head .left_account_body form {
+  margin: 5vh 5vw 10vh 5vw;
+  display: flex;
+  flex-direction: column;
+}
+.body_account_content .left_head .left_account_body form input {
+  height: 3.5vh;
+  width: 20vw;
+  margin-top: 4vh;
+  padding: 0.5em;
+  font-size: 1.3em;
+  border: solid 1px black;
+}
+.body_account_content .left_head .left_account_body form button {
+  font-size: 1.1em;
+  border-radius: 10px;
+  color: white;
+  background-color: darkolivegreen;
+  height: 5vh;
+  margin: 5vh 0 7vh 0;
+}
+.body_account_content .left_head .left_stacked_body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  transition: z-index 0.7s ease-in-out;
+  background-color: white;
+}
+.body_account_content .left_head .left_stacked_body .left_next_panel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.body_account_content .left_head .left_stacked_body .left_next_panel h2 {
+  margin-left: 8vw;
+}
+.body_account_content .left_head .left_stacked_body .left_next_panel button {
+  color: white;
+  background-color: darkolivegreen;
+  width: 15vw;
+  margin-left: 10vw;
+  border-radius: 10px;
+}
+.body_account_content .right_head {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.body_account_content .right_head .right_account_body {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: olivedrab;
+  z-index: 1;
+  transition: z-index 0.7s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+.body_account_content .right_head .right_account_body form {
+  margin: 5vh 5vw 10vh 5vw;
+  display: flex;
+  flex-direction: column;
+}
+.body_account_content .right_head .right_account_body form input {
+  height: 3.5vh;
+  width: 20vw;
+  margin-top: 4vh;
+  padding: 0.5em;
+  font-size: 1.3em;
+  border: solid 1px black;
+}
+.body_account_content .right_head .right_account_body form button {
+  font-size: 1.1em;
+  border-radius: 10px;
+  color: white;
+  background-color: darkolivegreen;
+  height: 5vh;
+  margin: 5vh 0 7vh 0;
+}
+.body_account_content .right_head .right_stacked_body {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  transition: z-index 0.7s ease-in-out;
+}
+.body_account_content .right_head .right_stacked_body .right_next_panel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.body_account_content .right_head .right_stacked_body .right_next_panel h2 {
+  margin-left: 8.5vw;
+}
+.body_account_content .right_head .right_stacked_body .right_next_panel button {
+  color: white;
+  background-color: darkolivegreen;
+  width: 15vw;
+  margin-left: 10vw;
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=styles.css.map */

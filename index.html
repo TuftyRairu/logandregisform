@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Accounts</title>
+</head>
+<script>
+    function registerUser(){
+    var username = document.getElementById('reguser').value;
+    var password = document.getElementById('regpass').value;
+
+    console.log(username);
+    console.log(password);
+
+    var user = {
+        username: username,
+        password: password
+    };
+
+    var json = JSON.stringify(user);
+    localStorage.setItem(username, json);
+    console.log('user added');
+    alert('user registered successfully!');
+    }
+
+    function loginUser(){
+        var username = document.getElementById('loguser').value;
+        var password = document.getElementById('logpass').value;
+
+        var user = localStorage.getItem(username);
+        var data = JSON.parse(user);
+        console.log(data);
+
+        if(user == null){
+            alert('wrong username!');
+        } else if(username == data.username && password == data.password){
+            window.location.href = "https://tuftyrairu.github.io/StudioNeat.github.io/index.html";
+            alert('successfully logged in!');
+            return false;
+        } else {
+            alert('wrong password!');
+        }
+    }
+
+    function register(){
+        document.getElementById('left_h').style.zIndex = "1";
+        document.getElementById('left_s').style.zIndex = "2";
+        document.getElementById('right_h').style.zIndex = "2";
+        document.getElementById('right_s').style.zIndex = "1";
+        
+        document.getElementById('loguser').value = '';
+        document.getElementById('logpass').value = '';
+    }
+
+    function login(){
+        document.getElementById('left_h').style.zIndex = "2";
+        document.getElementById('left_s').style.zIndex = "1";
+        document.getElementById('right_h').style.zIndex = "1";
+        document.getElementById('right_s').style.zIndex = "2";
+        
+        document.getElementById('reguser').value = '';
+        document.getElementById('regpass').value = '';
+    }
+</script>
+<body>
+    <div class="body_account_content">
+        <div class="left_head">
+            <div class="left_account_body" id="left_h">
+                <form>
+                    <h1>Login</h1>
+                    <input type="text" id="loguser" placeholder="Username" required>
+                    <input type="password" id="logpass" placeholder="Password" required>
+                    <button onclick="loginUser()">Login</button>
+                </form>
+            </div>
+            <div class="left_stacked_body" id="left_s">
+                <div class="left_next_panel">
+                    <h2>Already have an Account?</h2>
+                    <br>
+                    <button onclick="login()">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="right_head">
+            <div class="right_account_body" id="right_h">
+                <form>
+                    <h1>Registration</h1>
+                    <input type="text" id="reguser" placeholder="Username" required>
+                    <input type="password" id="regpass" placeholder="Password" required>
+                    <button onclick="registerUser()">Register</button>
+                </form>
+            </div>
+            <div class="right_stacked_body" id="right_s">
+                <div class="right_next_panel">
+                    <h2>Don't have an Account?</h2>
+                    <br>
+                    <button onclick="register()">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
